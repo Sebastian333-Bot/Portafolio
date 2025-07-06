@@ -34,10 +34,10 @@ export class CounterPageComponent {
   counter = 10;
   counterSignal = signal(10);
 
-  increaseBy(value: number) {
-    this.counter += value;
+  increaseBy(event: number) {
+    this.counter += event;
     // this.counterSignal.set(this.counterSignal() + value);
-    this.counterSignal.update((current) => current + value);
+    this.counterSignal.update((current) => current + event);
   }
 
   resetCounter() {
